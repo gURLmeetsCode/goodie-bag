@@ -1,15 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 export const SingleCandy = props => {
-  const { id, name, description, imageUrl, quantity } = props.candies
+  const { name, description, imageUrl, quantity } = props.candy
   return (
-    <Fragment>
       <div>
         <h3>{name}</h3>
-        <span>{description}</span>
-        <img>{imageUrl}</img>
-      </div>
-      <div>{quantity}</div>
-    </Fragment>
-  )
+        <div>{description}</div>
+        <img src={imageUrl}/>
+      <div> quantity: {quantity}</div>
+    </div>
+   )
 }
